@@ -1,2 +1,2 @@
-# allianz-wasserstra-e
+# allianz-wasserstraße
 Create a website for Allianz Wasserstraße
