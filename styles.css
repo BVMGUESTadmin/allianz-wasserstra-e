@@ -25,20 +25,25 @@ a { color: inherit; text-decoration: none; }
   transform-origin: 0 0; }
 
 .site-header { position: relative; z-index: 2; height: 186px; background: var(--white); }
-.logo { position: absolute; left: 63px; top: 50px; }
+.logo { position: absolute; right: 60px; top: 50px; }
 .logo img { display: block; width: 317px; height: 98px; }
-.contact { position: absolute; right: 60px; top: 49.7px; text-align: right;
+.contact { position: absolute; right: 60px; top: 986.9px; text-align: right;
   font-style: normal; font-size: 12px; line-height: 14.4px; color: var(--blue); }
 .contact strong { font-weight: 600; }
 
-.hero { position: absolute; inset: 186px 0 0 0;
+.hero { position: absolute; inset: 186px 0 177px 0; 
   background: url("assets/hero.jpg") no-repeat;
-  background-size: 1993px 1048px;         /* same scaling as in the PDF */
-  background-position: -37px -77px; }
+  background-size: 1993px 1048px;         
+  background-position: -2px -197px; }
 
-.card { position: absolute; left: 0; top: 44px;        /* 230 - 186 */
-  width: 926px; height: 809px;                          /* ends at y 1039 */
-  background: var(--white); padding: 29px 0 0 63px; }
+.kontakt { position: absolute; z-index: 3; right: 60px; top: 927.7px;
+  width: 145px; height: 38.3px; line-height: 38.3px; text-align: center;
+  border-radius: 12px; background: var(--purple); color: var(--white);
+  font-size: 18px; font-weight: 600; }
+
+.card { position: absolute; left: 65.7px; top: 65.2px;  
+  width: 917px; height: 809px;                            
+  background: var(--white); padding: 29px 0 0 54px; }
 
 h1 { font-family: "Fredoka", sans-serif; font-weight: 500;
   font-size: 72px; line-height: 72px; letter-spacing: 0;
@@ -52,7 +57,8 @@ h1 { font-family: "Fredoka", sans-serif; font-weight: 500;
 @media (max-width: 900px) {
   .stage { width: auto; height: auto; overflow: visible; }
   .site-header { height: auto; display: flex; flex-direction: column; gap: 20px; padding: 24px 16px; }
-  .logo, .contact { position: static; }
+  .logo, .contact, .kontakt { position: static; }
+  .kontakt { align-self: flex-start; }
   .logo img { width: 220px; height: auto; }
   .contact { text-align: left; }
   .hero { position: static; background: none; }
